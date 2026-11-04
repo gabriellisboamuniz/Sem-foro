@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semáforo</title>
+
+    <style>
+        .semaforo {
+            background: black;
+            width: 100px;
+            padding: 15px;
+            border-radius: 20px;
+        }
+
+        .luz {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: gray;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Semáforo</h1>
+
+    <div class="semaforo">
+        <div id="vermelho" class="luz"></div>
+        <div id="amarelo" class="luz"></div>
+        <div id="verde" class="luz"></div>
+    </div>
+
+    <br>
+
+    <button onclick="ligarVermelho()">Vermelho</button>
+
+    <button onclick="ligarAmarelo()">Amarelo</button>
+
+    <button onclick="ligarVerde()">Verde</button>
+
+    <script>
+
+        function desligar() {
+            document.getElementById("vermelho").style.backgroundColor = "gray";
+
+            document.getElementById("amarelo").style.backgroundColor = "gray";
+
+            document.getElementById("verde").style.backgroundColor = "gray";
+        }
+
+        function ligarVermelho() {
+            desligar();
+
+            document.getElementById("vermelho").style.backgroundColor = "red";
+        }
+
+        function ligarAmarelo() {
+            desligar();
+
+            document.getElementById("amarelo").style.backgroundColor = "yellow";
+        }
+
+        function ligarVerde() {
+            desligar();
+
+            document.getElementById("verde").style.backgroundColor = "green";
+        }
+
+    </script>
+
+</body>
+</html>
